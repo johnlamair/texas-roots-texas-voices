@@ -9,4 +9,15 @@ declare global {
   }
 }
 
+declare module '*.md' {
+  const Component: import('svelte').ComponentType;
+  export default Component;
+  export const metadata: Record<string, unknown>;
+}
+
+declare module '*.yaml' {
+  const data: unknown;
+  export default data;
+}
+
 export {};

@@ -1,0 +1,491 @@
+- outlet: 'New York Times'
+  title: 'Just Made a Queer Memory? Drop a Pin.'
+  url: 'https://www.nytimes.com/2023/06/25/style/queering-the-map-lucas-larochelle.html'
+  author: 'Katherine Oung'
+  year: 2023
+  featured: true
+
+- outlet: 'The Nation'
+  title: "Gaza's Queer Palestinians Fight to Be Remembered"
+  url: 'https://www.thenation.com/article/world/gaza-queering-the-map/'
+  author: "Sarah O'Neal"
+  year: 2023
+  featured: true
+
+- outlet: 'Time Magazine'
+  title: "In Gaza, 'Queering the Map' Reveals Heartbreaking Notes of LGBT Love and Loss"
+  url: 'https://time.com/6326254/queering-the-map-gaza-lgbt-palestinians/'
+  author: 'Chad De Guzman'
+  year: 2023
+  featured: true
+
+- outlet: 'C Magazine'
+  title: "The Map Is the Territory: On Lucas LaRochelle's Queering the Map"
+  url: 'https://cmagazine.com/articles/the-map-emisem-the-territory-on-lucas-larochelles-queering-the-m'
+  author: 'Kat Benedict'
+  year: 2023
+  featured: true
+
+- outlet: 'Sissy Screens'
+  title: 'Queering the Map: An Interview With Lucas LaRochelle'
+  url: 'https://www.sissyscreens.com/interview/queering-the-map-interview/'
+  author: 'Stephanie Williams'
+  year: 2023
+  featured: true
+
+- outlet: 'Them'
+  title: 'Queer U.K. Activists Hacked London Transit Ads to Support LGBTQ+ Gazans'
+  url: 'https://www.them.us/story/queering-the-map-the-dyke-project-london-transit-ad-hack'
+  author: 'Abby Monteil'
+  year: 2023
+  featured: true
+
+- outlet: 'HuffPost'
+  title: 'Queering the Map Reveals Poignant Glimpses Of Survival In Gaza'
+  url: 'https://www.huffpost.com/entry/queering-the-map-palestine_n_652fde5ce4b0da897ab610a9'
+  author: 'Ian Kumamoto'
+  year: 2023
+
+- outlet: 'The Independent'
+  title: 'LGBT+ activists hack London tube and bus adverts with stories of Palestinians'
+  url: 'https://www.independent.co.uk/news/uk/home-news/lgbt-activists-palestine-london-b2438425.html'
+  author: 'Maira Butt'
+  year: 2023
+
+- outlet: 'WIRED Italia'
+  title: 'Il muro digitale dove le persone queer piangono le perdite nella Striscia di Gaza'
+  url: 'https://www.wired.it/article/striscia-di-gaza-vittime-lgbtqia/'
+  author: 'Danielle Biaggi'
+  year: 2023
+
+- outlet: 'Mondoweiss'
+  title: 'A view from the Queer bloc to Free Palestine'
+  url: 'https://mondoweiss.net/2023/11/a-view-from-the-queer-bloc-to-free-palestine/'
+  author: 'Steven W. Thrasher'
+  year: 2023
+
+- outlet: 'Autostraddle'
+  title: 'Palestinian Liberation Is Queer Liberation'
+  url: 'https://www.autostraddle.com/palestinian-liberation-is-queer-liberation/'
+  author: 'Kayla Kumari Upadhyaya'
+  year: 2023
+
+- outlet: 'Vice'
+  title: 'Hackers Took Over Transit Ads with Messages from Queer Palestinians in Gaza'
+  url: 'https://www.vice.com/en/article/m7bxxq/hackers-took-over-transit-ads-with-messages-from-queer-palestinians-in-gaza'
+  author: 'Jordan Pearson'
+  year: 2023
+
+- outlet: 'Truthout'
+  title: "UK 'Dyke Project' Hacks London Bus Ads to Challenge Israeli Pinkwashing"
+  url: 'https://truthout.org/articles/uk-lesbian-collective-demands-ends-to-british-funding-of-israels-military/'
+  author: 'Zane McNeill'
+  year: 2023
+
+- outlet: 'Feminist Giant'
+  title: "Global Roundup: Gaza on 'Queering the Map', Bolivia Sexual Violence, Philippines Drag Artist Arrest, Indigenous Women in Malaysia vs Double Discrimination, Film on Caribbean Masculine-Presenting Women"
+  url: 'https://www.feministgiant.com/p/global-roundup-gaza-on-queering-the'
+  author: 'Mona Eltahawy'
+  year: 2023
+
+- outlet: 'Feminism in India'
+  title: "How 'Queering The Map' Has Helped Queer Palestinians Gain Visibility And Challenge Geopolitical Stereotypes"
+  url: 'https://feminisminindia.com/2023/12/05/how-queering-the-map-has-helped-queer-palestinians-gain-visibility-and-challenge-geopolitical-stereotypes/'
+  author: "Flavia D'mello"
+  year: 2023
+
+- outlet: 'KAOSGL'
+  title: "LGBTİ+ aktivistleri Londra metrosunu hackledi, Filistin'le dayanışma mesajı paylaştı"
+  url: 'https://kaosgl.org/haber/lgbti-aktivistleri-londra-metrosunu-hackledi-filistin-le-dayanisma-mesaji-paylasti'
+  author: 'Yazar'
+  year: 2023
+
+- outlet: 'Attitude'
+  title: "LGBTQ+ activists 'hack' TfL ads with messages from queer Palestinians"
+  url: 'https://www.attitude.co.uk/news/lgbtq-activists-the-dyke-project-hack-tfl-ads-palestinians-451431/'
+  author: 'Charlotte Manning'
+  year: 2023
+
+- outlet: 'GCN'
+  title: 'LGBTQ+ activists hijack London ads to share messages from queer Palestinians'
+  url: 'https://gcn.ie/lgbtq-activists-london-ads-messages-palestinians/'
+  author: 'Beatrice Fanucci'
+  year: 2023
+
+- outlet: 'Pink News'
+  title: 'Lesbian group replaces adverts with stories of LGBTQ+ people in Palestine'
+  url: 'https://www.thepinknews.com/2023/10/31/palestine-queering-map-lesbian-adverts-protest/'
+  author: 'Chantelle Billson'
+  year: 2023
+
+- outlet: 'Metro UK'
+  title: 'Heartbreaking goodbye messages shared by gay Palestinians'
+  url: 'https://metro.co.uk/2023/10/30/lgbtq-palestinians-are-sharing-heartbreaking-goodbye-messages-on-mapping-app-19742837/?ico=zone-widget_home_israel-hamas-war&utm_source=headtopics&utm_medium=news&utm_campaign=2023-10-31'
+  author: 'Sarah Hooper'
+  year: 2023
+
+- outlet: 'Fanpage.it'
+  title: "I messaggi d'amore strazianti pubblicati dalle coppie Lgbtq+ di Gaza: 'Ti bacerò in paradiso'"
+  url: 'https://www.fanpage.it/innovazione/tecnologia/i-messaggi-damore-strazianti-pubblicati-dalle-coppie-lgbtq-di-gaza-ti-bacero-in-paradiso/'
+  author: 'Elisabetta Rosso'
+  year: 2023
+
+- outlet: 'La Nazione'
+  title: 'Messaggi d''amore dalla Striscia di Gaza: "Qui essere gay è difficile"'
+  url: 'https://luce.lanazione.it/attualita/messaggi-amore-gaza-queer/'
+  author: 'Giorgia Borgioli'
+  year: 2023
+
+- outlet: 'Reckon'
+  title: 'LGBTQ Palestinians in Gaza are sharing their last words on an online mapping platform'
+  url: 'https://www.reckon.news/lgbtq/2023/10/lgbtq-palestinians-in-gaza-are-sharing-their-last-words-on-online-mapping-platform.html'
+  author: 'Denny'
+  year: 2023
+
+- outlet: 'Out'
+  title: 'LGBTQ+ Palestinians Pay Tribute to Their Lost Loves in Heartbreaking Social Posts'
+  url: 'https://www.out.com/news/queer-palestinians-queering-the-map#toggle-gdpr'
+  author: 'Mey Rude'
+  year: 2023
+
+- outlet: 'Pride'
+  title: 'Queering the Map in Gaza: LGBTQ+ Palestinians Pay Tribute to Deceased Loved Ones'
+  url: 'https://www.pride.com/gay-news/queering-the-map-gaza-lgbtq-palestinians#rebelltitem1'
+  author: 'Ryan Adamczeski'
+  year: 2023
+
+- outlet: 'Semafor'
+  title: 'An online map for LGBTQ personal stories becomes a rare window into Gaza'
+  url: 'https://www.semafor.com/article/10/17/2023/an-online-map-for-lgbtq-personal-stories-becomes-a-rare-window-into-gaza'
+  author: 'Louise Matsakis'
+  year: 2023
+
+- outlet: 'Konbini'
+  title: 'Au Moyen-Orient, la population LGBTQIA+ raconte son vécu sur une carte en ligne bouleversante'
+  url: 'https://www.konbini.com/societe/au-moyen-orient-la-population-lgbtqia-raconte-son-vecu-sur-une-carte-en-ligne-bouleversante/'
+  author: 'Flavio Sillitti'
+  year: 2023
+
+- outlet: 'Antivirus'
+  title: 'Queering the Map: Τα κουήρ άτομα στην Παλαιστίνη βρίσκουν ένα διαδικτυακό καταφύγιο'
+  url: 'https://avmag.gr/queering-the-map-ta-kouir-atoma-stin-palaistini-vriskoun-ena-diadiktyako-katafygio2/'
+  author: 'Ανδρομάχη Κουτσουλέντη'
+  year: 2023
+
+- outlet: 'GCN'
+  title: 'Queer people in Gaza share memories of lost loved ones amid Hamas-Israel conflict'
+  url: 'https://gcn.ie/queer-messages-gaza-hamas-israel-conflict/'
+  author: 'Beatrice Fanucci'
+  year: 2023
+
+- outlet: 'MSU Reporter'
+  title: 'Queer love and death in the Gaza Strip'
+  url: 'https://www.msureporter.com/2023/11/02/queer-love-and-death-in-the-gaza-strip/'
+  author: 'Jeremy Redlien'
+  year: 2023
+
+- outlet: 'Nylon Manila'
+  title: 'Filipino pins on Queering the Map, the digital atlas that immortalizes queer experiences all over the world'
+  url: 'https://nylonmanila.com/what-is-queering-the-map-immortalizes-queer-experiences/'
+  author: 'Nica Glorioso'
+  year: 2023
+
+- outlet: 'Radio France'
+  title: 'Queering the map: une carte en ligne dédiée aux LGBTQIA+ utilisée à Gaza'
+  url: 'https://www.radiofrance.fr/franceculture/podcasts/les-nouvelles-d-un-monde-meilleur/queering-the-map-une-carte-en-ligne-dediee-aux-lgbtqia-utilisee-a-gaza-8673669'
+  author: 'Juliette Devaux'
+  year: 2023
+
+- outlet: 'The Hindu'
+  title: 'This website celebrates queer memories from across the world'
+  url: 'https://www.thehindu.com/life-and-style/pride-month-2023-this-website-celebrates-queer-memories-from-across-the-world/article66997007.ece'
+  author: 'Sanjana Ganesh'
+  year: 2023
+
+- outlet: 'Dezeen'
+  title: 'Support is needed to keep queer and trans spaces alive say LGBTQ+ designers'
+  url: 'https://www.dezeen.com/2023/06/28/queer-spaces-trans-lgbtq-designers-researchers/'
+  author: 'Amy Peacock'
+  year: 2023
+
+- outlet: 'Woo'
+  title: 'This interactive, pink world map celebrates a global queer community'
+  url: 'https://planetwoo.itv.com/posts/queering-the-map-global-community-pride'
+  author: 'Darhsita Goyal'
+  year: 2023
+
+- outlet: 'De Volkskrant'
+  title: 'Lucas LaRochelle ontwierp een online lhbti-wereldkaart waarop bijna een half miljoen persoonlijke, queer ervaringen staan'
+  url: 'https://www.volkskrant.nl/cultuur-media/lucas-larochelle-ontwierp-een-online-lhbti-wereldkaart-waarop-bijna-een-half-miljoen-persoonlijke-queer-ervaringen-staan~b6ef9def/'
+  author: 'Emma Ruiter'
+  year: 2023
+
+- outlet: 'Gay Times'
+  title: "'Lesbian is not a dirty word: How learning about our history filled me with pride'"
+  url: 'https://www.gaytimes.co.uk/life/lesbian-is-not-a-dirty-word-how-learning-about-our-history-filled-me-with-pride/'
+  author: 'Zaynab Melhuish-Khan'
+  year: 2023
+
+- outlet: 'El Espectador'
+  title: 'Así se creó el mapamundi LGBTIQ+ que ubica experiencias de diversidad sexual'
+  url: 'https://www.elespectador.com/genero-y-diversidad/la-disidencia/asi-se-creo-el-mapamundi-lgbtiq-que-ubica-experiencias-de-diversidad-sexual-queering-the-map/'
+  author: 'Mariana Escobar Bernoske'
+  year: 2023
+
+- outlet: 'Honi Soit'
+  title: 'Queer & Foreign: Finding our own space between borders and communities'
+  url: 'http://honisoit.com/2023/05/queer-foreign-finding-our-own-space-between-borders-and-communities/'
+  author: 'René Hà'
+  year: 2023
+
+- outlet: 'Scratching the Surface'
+  title: 'Why community archives are a radical approach to archiving'
+  url: 'https://scratchingthesurface.fm/stories/2023-4-25-community-archives/'
+  author: 'Randa Hadi & Victoria Gerson'
+  year: 2023
+
+- outlet: 'Infogr8'
+  title: 'Best of Data for Everyone, April 2023: Because even ship tracking can be beautiful'
+  url: 'https://infogr8.com/best-of-data-for-everyone-april-2023/'
+  author: 'Jane Zhang'
+  year: 2023
+
+- outlet: 'Repubblica'
+  title: "La mappa dell'amore queer"
+  url: 'https://www.repubblica.it/venerdi/2023/04/21/news/queering_the_map_mappa_gay_lgbtq_storie_damore-397067781/'
+  author: 'Michele Gravino'
+  year: 2023
+
+- outlet: 'Urban Creature'
+  title: "อ่านบันทึกเรื่องราวของชาว LGBTQ+ ที่เชื่อมโยงความทรงจำกับสถานที่ บนแผนที่ออนไลน์ 'Queering the Map'"
+  url: 'https://urbancreature.co/queering-the-map/'
+  author: 'Urban Creature Staff'
+  year: 2023
+
+- outlet: 'Nexo'
+  title: 'Este site conta histórias da comunidade LGBTI+ pelo mundo'
+  url: 'https://www.nexojornal.com.br/expresso/2023/03/24/Este-site-conta-hist%C3%B3rias-da-comunidade-LGBTI-pelo-mundo'
+  author: 'Murillo Otavio'
+  year: 2023
+
+- outlet: 'Screenshot Media'
+  title: 'Queering the Map: a community-based platform sharing queer and trans stories from across the globe'
+  url: 'https://screenshot-media.com/politics/lgbtqi-rights/queering-the-map-interview-lucas-larochelle/?utm_term=Autofeed&utm_medium=Social&utm_source=Twitter#Echobox=1675503952'
+  author: 'Charlie Sawyer'
+  year: 2023
+
+- outlet: 'Global Voices'
+  title: 'Queering the internet: anonymous online spaces for LGBTQ+ people'
+  url: 'https://globalvoices.org/2023/02/07/queering-the-internet-anonymous-online-spaces-for-lgbtq-people/'
+  author: 'Sydney Allen'
+  year: 2023
+
+- outlet: 'Paging Dr. Lesbian'
+  title: 'Towards a Global Queer Consciousness'
+  url: 'https://kiradeshler.substack.com/p/towards-a-global-queer-consciousness'
+  author: 'Kira Deshler'
+  year: 2023
+
+- outlet: 'Star Observer'
+  title: 'Queering the Map: This Maps-Style Site Helps You Drop a Pin on Your Queer Experiences'
+  url: 'https://www.starobserver.com.au/features/queering-the-map-this-maps-style-site-helps-you-drop-a-pin-on-your-queer-experiences/223072'
+  author: 'Brandon Bentley'
+  year: 2023
+
+- outlet: 'CBC News'
+  title: "Montrealer's 'Queering the Map' project documents queer experiences all over the world"
+  url: 'https://www.cbc.ca/news/canada/montreal/queering-the-map-viral-tiktok-1.6347097'
+  author: 'Shahroze Rauf'
+  year: 2023
+
+- outlet: 'Red Pepper'
+  title: 'The importance of queer space'
+  url: 'https://www.redpepper.org.uk/queer-space/'
+  author: 'Molly Fleming'
+  year: 2023
+
+- outlet: 'Immerse'
+  title: 'Co-Creating a Map of Queer Experience'
+  url: 'https://immerse.news/co-creating-a-map-of-queer-experience-bece7a743ca7'
+  author: 'Sarah Wolozin'
+  year: 2023
+
+- outlet: 'CityLab'
+  title: 'A Crowdsourced Map of the Queer World'
+  url: 'https://www.citylab.com/life/2018/02/how-to-queer-the-mapand-fend-off-an-attack/552824/'
+  author: 'Martin Echenique + Alastair Boone'
+  year: 2018
+
+- outlet: 'VICE'
+  title: 'Find Yourself in The Queer Version of Google Maps'
+  url: 'https://www.vice.com/en_us/article/ne9kjx/queering-the-map-google-maps-lgtbq'
+  author: 'Sarah Burke'
+  year: 2018
+
+- outlet: 'CBC Arts'
+  title: 'Queer Love in the Making'
+  url: 'https://www.cbc.ca/arts/queer-love-in-the-making-this-massive-interactive-map-holds-a-whole-world-of-heartfelt-moments-1.4722385'
+  author: 'Peter Knegt'
+  year: 2018
+
+- outlet: 'CBC Arts'
+  title: 'The year in queer: An A-Z guide to the exceptional LGBTQ arts and culture of 2018'
+  url: 'https://www.cbc.ca/arts/the-year-in-queer-an-a-z-guide-to-the-exceptional-lgbtq-arts-and-culture-of-2018-1.4921091'
+  author: 'Peter Knegt'
+  year: 2018
+
+- outlet: 'Ruthless Magazine'
+  title: 'Queering The Map: A Skype Call with Lucas LaRochelle'
+  url: 'http://www.ruthlessmagazine.co.uk/queering-the-map'
+  author: 'Angad Singh'
+  year: 2018
+
+- outlet: 'Projeto Colabora'
+  title: 'O amor em tempos de GPS'
+  url: 'https://projetocolabora.com.br/ods5/o-amor-em-tempos-de-gps/'
+  author: 'Carlos Albuquerque'
+  year: 2018
+
+- outlet: 'Yorokobu'
+  title: 'El mapa queer que desafía las reglas sociales de sexo y género'
+  url: 'https://www.yorokobu.es/queering-the-map/'
+  author: 'Manu Garrido'
+  year: 2018
+
+- outlet: 'Project Myopia'
+  title: 'Interview with Lucas LaRochelle, Founder of Queering The Map'
+  url: 'https://projectmyopia.com/interview-with-lucas-larochelle-founder-of-queering-the-map/'
+  author: 'Toby Sharpe'
+  year: 2018
+
+- outlet: 'Archer Magazine'
+  title: 'Queering The Map: An Archive of Queer Experience'
+  url: 'http://archermagazine.com.au/2018/08/queering-the-map/'
+  author: 'Allison Gallagher'
+  year: 2018
+
+- outlet: 'VOGUE'
+  title: 'Faved, Followed, Hacked, Blocked - The Digi Diary Celebrates Pride With BBZ'
+  url: 'https://www.vogue.co.uk/article/digi-diary-pride-month'
+  author: 'BBZ London'
+  year: 2018
+
+- outlet: 'CityNews'
+  title: 'Queering The Map at Concordia'
+  url: 'https://montreal.citynews.ca/video/2019/07/19/queering-the-map-at-concordia/'
+  author: 'Aimée Lemieux'
+  year: 2019
+
+- outlet: 'Tourisme Montreal'
+  title: '15 Montrealers Changing The World'
+  url: 'https://blog.mtl.org/en/15-montrealers-2019'
+  author: 'Mark Andrew Hamilton'
+  year: 2019
+
+- outlet: 'Conde Nast Traveller'
+  title: 'This Mapping Tool Collects Queer Sites and Memories'
+  url: 'https://www.cntraveler.com/story/queering-the-map-collects-queer-sites-and-memories'
+  author: 'Melissa Kravitz Hoeffner'
+  year: 2019
+
+- outlet: 'Concordia'
+  title: "Queering The Map comes to Concordia's 4TH SPACE"
+  url: 'https://www.concordia.ca/news/stories/2019/07/09/queering-the-map-comes-to-concordia-s-4th-space.html'
+  author: 'Mackenzie Lad and Tom Peacock'
+  year: 2019
+
+- outlet: 'AIGA Eye On Design'
+  title: 'A Map of Queer Experience, Art and Design in the Gulf, Jumpy Design for a Historic Playhouse + More'
+  url: 'https://eyeondesign.aiga.org/no-184-a-map-of-queer-experience-art-and-design-in-the-gulf-jumpy-design-for-a-historic-playhouse-more/'
+  author: 'Meg Miller'
+  year: 2019
+
+- outlet: 'Paper'
+  title: 'Queering The Map is a Living LGBTQ History'
+  url: 'https://www.papermag.com/queering-the-map-lgbtq-history-2543546974.html'
+  author: 'Jhoni Jackson'
+  year: 2019
+
+- outlet: 'i-D'
+  title: 'Queering The Map is connecting Queer Moments in Life'
+  url: 'https://i-d.vice.com/en_us/article/vbxkpb/queering-the-map-is-connecting-queer-moments-in-life'
+  author: 'Amelia Abraham'
+  year: 2019
+
+- outlet: 'INTO'
+  title: 'Post Cyber Attack Queering The Map Argues That Anywhere Can Be a Queer Space'
+  url: 'https://www.intomore.com/culture/postcyberattack-queering-the-map-argues-that-anywhere-can-be-a-queer-space'
+  author: 'Matthew Rodriguez'
+  year: 2019
+
+- outlet: 'LGBT Sentinel'
+  title: 'Queering The Map: An Interview with Creator Lucas LaRochelle'
+  url: 'http://www.thelgbtsentinel.com/queering-the-map-interview-creator-lucas-larochelle/'
+  author: 'Jo Jackson'
+  year: 2019
+
+- outlet: 'The Outline'
+  title: 'Queering The Map is back'
+  url: 'https://theoutline.com/post/4043/queering-the-map-is-back?zd=1&zi=lue4kna4'
+  author: 'Anne-Derrick Gaillot'
+  year: 2019
+
+- outlet: 'The Skinny'
+  title: 'Queering The Map on Capturing LGBTQ+ History'
+  url: 'https://www.theskinny.co.uk/sexuality/lgbt/queering-the-map-on-capturing-lgbtq-history'
+  author: 'Katie Goh'
+  year: 2019
+
+- outlet: 'Hornet'
+  title: 'This Project Dedicated to Mapping Queer Spaces Is a Precious Tool for Our LGBTQ Community'
+  url: 'https://hornet.com/stories/queering-the-map-website/'
+  author: 'Alexander Kacala'
+  year: 2019
+
+- outlet: 'Autostraddle'
+  title: "Here, Queer, Everywhere: 'Queering the Map' Gives Voice to Queer Spaces Worldwide"
+  url: 'https://www.autostraddle.com/here-queer-everywhere-queering-the-map-gives-voice-to-queer-spaces-worldwide-419732/'
+  author: 'Vanessa Pamela'
+  year: 2019
+
+- outlet: 'Fugues'
+  title: 'Géolocaliser nos souvenirs queer'
+  url: 'https://www.fugues.com/252198-7240-7276-article-geolocaliser-nos-souvenirs-queer.html'
+  author: 'Michel Joanny-Furtin'
+  year: 2019
+
+- outlet: 'Numerama'
+  title: 'Sur cette carte interactive, des personnes queer façonnent leur histoire collective'
+  url: 'https://www.numerama.com/pop-culture/367351-sur-cette-carte-interactive-des-personnes-queer-faconnent-leur-histoire-collective.html'
+  author: 'Nelly Lesage'
+  year: 2019
+
+- outlet: 'ZETT'
+  title: 'Landkarte queerer Momente: Hier hatte ich meinen ersten Blowjob von einem anderen Mann'
+  url: 'https://ze.tt/landkarte-queerer-momente-hier-hatte-ich-meinen-ersten-blowjob-von-einem-anderen-mann/'
+  author: 'Eva Reisinger'
+  year: 2019
+
+- outlet: 'Komitid'
+  title: '« Queering the Map » ou comment repenser le territoire quand on est invisibilisé.e.s'
+  url: 'https://www.komitid.fr/2018/06/11/queering-the-map-cartographie-interview/'
+  author: 'Anne-Laure Pineau'
+  year: 2018
+
+- outlet: 'McGill Daily'
+  title: 'Archiving Queer Histories'
+  url: 'https://www.mcgilldaily.com/2018/01/archiving-queer-histories/'
+  author: 'Panayot Gaidov'
+  year: 2018
+
+- outlet: 'Concordia'
+  title: 'A digital project crowdsources 27,000 queer memories from around the globe'
+  url: 'https://www.concordia.ca/news/stories/2018/12/11/a-digital-project-crowdsources-27-000-queer-memories-from-around-the-globe.html'
+  author: 'Mackenzie Lad'
+  year: 2018
+
+- outlet: 'SRF'
+  title: 'Eine Weltkarte der queeren Liebe'
+  url: 'https://www.srf.ch/kultur/netzwelt/webprojekt-gegen-homophobie-eine-weltkarte-der-queeren-liebe'
+  author: 'Mirja Gabathuler'
+  year: 2018

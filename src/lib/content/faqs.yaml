@@ -1,0 +1,62 @@
+- q: "Why can't I see my post on the map?"
+  a: >
+    <p>In 99.9% of cases, it is because it has not been reviewed by our
+    moderation team yet. All posts are moderated by a small group of
+    volunteers before appearing publicly on the map, in order to ensure
+    they do not contain breaches of anonymity, hate speech, or
+    spam/advertising. Rest assured that your post will be visible as
+    soon as we reach it in the moderation queue.</p>
+
+- q: 'Can I delete my post?'
+  a: >
+    <p>Yes, of course! To delete your post, please email the text of the
+    post you would like deleted to <a href="mailto:hi@queeringthemap.com">hi@queeringthemap.com</a> with the subject line 'Delete My Post'.</p>
+
+- q: 'How can I become a moderator?'
+  a: >
+    <p>We are always welcoming new volunteer moderators to our team. For
+    information on upcoming moderator onboarding sessions, please email
+    us at <a href="mailto:hi@queeringthemap.com">hi@queeringthemap.com</a>.</p>
+
+- q: 'Who made Queering the Map?'
+  a: >
+    <p>Queering the Map was created by Lucas LaRochelle in 2017. The
+    platform is maintained by LaRochelle and a global network of
+    moderators, developers, and advisors.</p>
+
+    <p>This network includes (in alphabetical order by last name):
+    Jacqueline Beaumont, Jamie Bliss, Jonathan Chomko, Nova Courtoise,
+    Liane Decary-Chen, Carter Fredericks, Neema Githere, Jean-Sebastien
+    Gervais, William Gibson, Jo Kroese, Tess Kuramoto, Emma Kirby,
+    Robbie Mackay, Felipe Ignacio Noriega, Dennis Ohm-Fickler, Miguel
+    Rosales, Juan Camilo Rodriguez Gonzalez, Sabine Rosenberg, Alex
+    Robichaud, Alexandra Ulsh, and Ashleigh Watson, as well as other
+    members who prefer to remain anonymous.</p>
+
+- q: 'What data does Queering the Map collect?'
+  a: >
+    <p>The only data we collect is the story you write, the location you
+    click on the map, and the time and date of the submission. We do not
+    collect any other data in association with the posts.</p>
+
+- q: 'Can I use content from Queering the Map in my own work?'
+  a: >
+    <p>Yes, as long as you follow a few rules!</p>
+
+    <p>The content of Queering the Map is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. This means you can freely share the content by copying and redistributing it in any way you like. Additionally, you're allowed to adapt the material by remixing, transforming, or building upon it.</p>
+
+    <p>However, there are some conditions:</p>
+
+    <div class="partial_div-numbered">
+      <span>1</span>You must give proper credit to Queering the Map, provide a link to the Creative Commons license, and specify if you've made any changes to the original content.
+    </div>
+    <br />
+    <div class="partial_div-numbered">
+      <span>2</span>You may not use the content of Queering the Map, or any works you create based on it, for commercial purposes.
+    </div>
+    <br />
+    <div class="partial_div-numbered">
+      <span>3</span>If you create something new based on the content of Queering the Map, you must share it under the same Creative Commons license as the original.
+    </div>
+
+    <p>If you have any questions, or are interested in exploring a collaborative project with us, please email us at <a href="mailto:hi@queeringthemap.com">hi@queeringthemap.com</a>.</p>
