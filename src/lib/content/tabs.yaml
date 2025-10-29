@@ -1,0 +1,23 @@
+- key: about
+  label: About
+
+- key: support
+  label: Support Us
+
+- key: moderation
+  label: Moderation
+
+- key: press
+  label: Press
+
+- key: faqs
+  label: FAQs
+
+- key: terms
+  label: Terms of Use
+
+- key: privacy
+  label: Privacy Policy
+
+- key: contact
+  label: Contact
