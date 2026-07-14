@@ -1,5 +1,5 @@
 <script>
-  import logo from '$lib/assets/QTM_LOGO2024.png';
+  import logo from '$lib/assets/trtv-LOGO2026.png';
   import InfoButton from './InfoButton.svelte';
   import AddButton from './AddButton.svelte';
   import { infoOverlayVisible, addOverlayVisible } from '../stores';
@@ -53,15 +53,24 @@
     pointer-events: none;
     z-index: var(--logo-z-index);
   }
+
+  #logo img {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
   @media (max-width: 800px) {
     #logo img {
-      height: 51px;
+      width: min(60vw, 260px);
+      height: auto;
     }
   }
 
   @media (min-width: 800px) {
     #logo img {
-      width: 200px;
+      width: 320px;
+      height: auto;
     }
   }
 
