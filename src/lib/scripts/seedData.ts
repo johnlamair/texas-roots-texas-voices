@@ -1,11 +1,21 @@
 import { writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
-import type { FeatureCollection, Feature, Point } from 'geojson';
+import type {
+  FeatureCollection,
+  Feature,
+  Point,
+  MultiPolygon,
+  Polygon,
+  FeatureCollection as GeoJsonFeatureCollection
+} from 'geojson';
 import { roundCoordinates } from '$lib/utils/utils';
+import tx23Boundary from '$lib/data/tx23.json';
+import { randomPointInGeometry } from '$lib/utils/geo';
 
-function getRandomCoordinate(min: number, max: number): number {
-  return Math.random() * (max - min) + min;
-}
+const tx23GeoJSON = tx23Boundary as unknown as GeoJsonFeatureCollection<
+  Polygon | MultiPolygon
+>;
+const tx23Geometry = tx23GeoJSON.features[0].geometry as Polygon | MultiPolygon;
 
 function generateRandomWord(): string {
   return (Math.random() + 1).toString(36).substring(9);
@@ -21,8 +31,7 @@ function generateRandomDescription(id: number): string {
 }
 
 function generateRandomMoment(id: number): Feature<Point> {
-  const longitude = getRandomCoordinate(-180, 180);
-  const latitude = getRandomCoordinate(-90, 90);
+  const [longitude, latitude] = randomPointInGeometry(tx23Geometry);
 
   const point: Point = {
     type: 'Point',

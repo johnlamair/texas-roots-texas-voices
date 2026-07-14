@@ -19,16 +19,64 @@
   import markerImage from '$lib/assets/marker.png';
   import markerHoveredImage from '$lib/assets/marker-hovered.png';
   import styleJson from '$lib/data/pmtiles/style.json';
+  import tx23Boundary from '$lib/data/tx23.json';
   const style = styleJson as StyleSpecification;
   import addMarkerImage from '$lib/assets/add-marker.png';
   import { activeMarkerCoords } from '../stores';
-  import type { FeatureCollection, Point, GeoJsonProperties } from 'geojson';
+  import {
+    expandBBox,
+    getFeatureCollectionBounds,
+    isPointInsideGeometry
+  } from '$lib/utils/geo';
+  import type {
+    FeatureCollection,
+    Point,
+    GeoJsonProperties,
+    MultiPolygon,
+    Polygon
+  } from 'geojson';
 
   let map: MapType;
   let mapContainer: HTMLDivElement;
   let isMomentLayerClicked = false;
 
-  const initialState = { lng: -73.567256, lat: 45.501689, zoom: 12.5 };
+  const tx23GeoJSON = tx23Boundary as unknown as FeatureCollection<
+    Polygon | MultiPolygon
+  >;
+
+  const texasBounds = new maplibregl.LngLatBounds(
+    [-106.645646, 25.837377],
+    [-93.508292, 36.500704]
+  );
+
+  const texasViewBox = expandBBox(
+    {
+      minLng: texasBounds.getWest(),
+      minLat: texasBounds.getSouth(),
+      maxLng: texasBounds.getEast(),
+      maxLat: texasBounds.getNorth()
+    },
+    0.5
+  );
+
+  const texasViewBounds = new maplibregl.LngLatBounds(
+    [texasViewBox.minLng, texasViewBox.minLat],
+    [texasViewBox.maxLng, texasViewBox.maxLat]
+  );
+
+  const tx23Bounds = getFeatureCollectionBounds(
+    tx23GeoJSON as unknown as FeatureCollection
+  );
+
+  const tx23Geometry = tx23GeoJSON.features[0].geometry as
+    | Polygon
+    | MultiPolygon;
+
+  const initialState = {
+    lng: (tx23Bounds.minLng + tx23Bounds.maxLng) / 2,
+    lat: (tx23Bounds.minLat + tx23Bounds.maxLat) / 2,
+    zoom: 6.6
+  };
 
   const markerHeight = 39;
   const markerId = 'moments';
@@ -118,6 +166,42 @@
     map.keyboard.enable();
 
     map.on('load', async () => {
+      map.setMaxBounds(texasViewBounds);
+
+      const texasCamera = map.cameraForBounds(texasViewBounds, {
+        padding: 40
+      });
+      if (texasCamera?.zoom !== undefined) {
+        map.setMinZoom(texasCamera.zoom);
+      }
+
+      map.addSource('tx23-boundary', {
+        type: 'geojson',
+        data: tx23GeoJSON
+      });
+
+      map.addLayer({
+        id: 'tx23-boundary-outline',
+        type: 'line',
+        source: 'tx23-boundary',
+        paint: {
+          'line-color': '#2f4f2f',
+          'line-width': 3,
+          'line-opacity': 0.9
+        }
+      });
+
+      map.fitBounds(
+        [
+          [tx23Bounds.minLng, tx23Bounds.minLat],
+          [tx23Bounds.maxLng, tx23Bounds.maxLat]
+        ],
+        {
+          padding: 48,
+          duration: 0
+        }
+      );
+
       map.addSource(markerId, {
         type: 'geojson',
         data: 'data/moments.json'
@@ -234,6 +318,9 @@
         }
 
         const { lng, lat } = e.lngLat;
+        if (!isPointInsideGeometry([lng, lat], tx23Geometry)) {
+          return;
+        }
         activeMarkerCoords.set({ lng, lat });
       });
     });

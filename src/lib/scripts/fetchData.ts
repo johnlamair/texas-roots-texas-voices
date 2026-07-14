@@ -1,8 +1,17 @@
 import { supabase } from '../clients/supabaseClient';
 import fs from 'fs';
 import path from 'path';
-import type { FeatureCollection, GeoJsonProperties, Point } from 'geojson';
+import type {
+  FeatureCollection,
+  GeoJsonProperties,
+  Point,
+  Polygon,
+  MultiPolygon,
+  FeatureCollection as GeoJsonFeatureCollection
+} from 'geojson';
 import { roundCoordinates } from '$lib/utils/utils';
+import tx23Boundary from '$lib/data/tx23.json';
+import { isPointInsideGeometry } from '$lib/utils/geo';
 
 type Moment = {
   short_id: number;
@@ -11,6 +20,11 @@ type Moment = {
   };
   description: string;
 };
+
+const tx23GeoJSON = tx23Boundary as unknown as GeoJsonFeatureCollection<
+  Polygon | MultiPolygon
+>;
+const tx23Geometry = tx23GeoJSON.features[0].geometry as Polygon | MultiPolygon;
 
 export async function fetchIdCoords(): Promise<FeatureCollection<
   Point,
@@ -26,9 +40,13 @@ export async function fetchIdCoords(): Promise<FeatureCollection<
     return null;
   }
 
+  const filtered = (data as Moment[]).filter((moment) =>
+    isPointInsideGeometry(moment.location.coordinates, tx23Geometry)
+  );
+
   const geoJson: FeatureCollection<Point, GeoJsonProperties> = {
     type: 'FeatureCollection',
-    features: (data as Moment[]).map((moment) => ({
+    features: filtered.map((moment) => ({
       type: 'Feature',
       id: moment.short_id,
       geometry: {
@@ -56,13 +74,17 @@ export async function fetchIdDescriptions(): Promise<Record<
     return null;
   }
 
-  const descriptions: Record<number, string> = (data as Moment[]).reduce(
-    (acc, moment) => {
-      acc[moment.short_id] = moment.description;
-      return acc;
-    },
-    {} as Record<number, string>
-  );
+  const descriptions: Record<number, string> = (data as Moment[])
+    .filter((moment) =>
+      isPointInsideGeometry(moment.location.coordinates, tx23Geometry)
+    )
+    .reduce(
+      (acc, moment) => {
+        acc[moment.short_id] = moment.description;
+        return acc;
+      },
+      {} as Record<number, string>
+    );
 
   return descriptions;
 }

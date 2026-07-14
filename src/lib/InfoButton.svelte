@@ -4,7 +4,7 @@
   fill="none"
   viewBox="4 0 45 45"
   ><g filter="url(#filter0_d_0_1)"
-    ><rect x="4" width="45" height="45" fill="#FEC3E0"></rect><rect
+    ><rect x="4" width="45" height="45" fill="#B8D9A8"></rect><rect
       x="4.5"
       y="0.5"
       width="44"
@@ -12,11 +12,11 @@
       stroke="black"
     ></rect></g
   ><g filter="url(#filter1_d_0_1)"
-    ><line x1="15" y1="22.5" x2="38" y2="22.5" stroke="black"></line></g
+    ><line x1="15" y1="22.5" x2="38" y2="22.5" stroke="#3f5f3a"></line></g
   ><g filter="url(#filter2_d_0_1)"
-    ><line x1="15" y1="14.5" x2="38" y2="14.5" stroke="black"></line></g
+    ><line x1="15" y1="14.5" x2="38" y2="14.5" stroke="#3f5f3a"></line></g
   ><g filter="url(#filter3_d_0_1)"
-    ><line x1="15" y1="30.5" x2="38" y2="30.5" stroke="black"></line></g
+    ><line x1="15" y1="30.5" x2="38" y2="30.5" stroke="#3f5f3a"></line></g
   ><defs
     ><filter
       id="filter0_d_0_1"
