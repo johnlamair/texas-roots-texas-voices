@@ -90,3 +90,9 @@ div.mapboxgl-popup-content {
   line-height: 1.3em;
   padding: 12px;
 }
+
+.moment-popup__issue {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.45em;
+}

@@ -68,7 +68,7 @@
   );
 
   const texasViewBounds = new maplibregl.LngLatBounds(
-    [texasViewBox.minLng, texasViewBox.minLat],
+    [texasViewBox.minLng, texasViewBox.minLat - 1.6],
     [texasViewBox.maxLng, texasViewBox.maxLat]
   );
 
@@ -145,11 +145,13 @@
   }
 
   onMount(() => {
+    const isMobile = window.matchMedia('(max-width: 800px)').matches;
+
     map = new Map({
       container: mapContainer,
       style: style,
       center: [initialState.lng, initialState.lat],
-      zoom: initialState.zoom,
+      zoom: isMobile ? 6.2 : initialState.zoom,
       minZoom: 3,
       maxZoom: 18,
       attributionControl: false
@@ -206,7 +208,7 @@
           [tx23Bounds.maxLng, tx23Bounds.maxLat]
         ],
         {
-          padding: 48,
+          padding: isMobile ? 92 : 48,
           duration: 0
         }
       );
@@ -278,17 +280,26 @@
             return;
           }
 
+          const issueSlug =
+            typeof feature.properties?.issue === 'string'
+              ? feature.properties.issue
+              : 'other';
+          const issueLabel =
+            ISSUES.find((issue) => issue.slug === issueSlug)?.label ??
+            'Something Else Close to Home';
+
           getMoment(feature.id)
             .then((text) => {
               const description = text;
               if (coordinates.length === 2) {
+                const popupHtml = `<div class="moment-popup__issue">Main issue: ${issueLabel}</div>${description}`;
                 new Popup({
                   offset: [0, -markerHeight],
                   anchor: 'bottom',
                   maxWidth: 'none'
                 })
                   .setLngLat(coordinates as LngLatLike)
-                  .setHTML(description)
+                  .setHTML(popupHtml)
                   .addTo(map);
               } else {
                 console.error('Invalid coordinates format');
