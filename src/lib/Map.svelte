@@ -28,7 +28,9 @@
   let mapContainer: HTMLDivElement;
   let isMomentLayerClicked = false;
 
-  const initialState = { lng: -73.567256, lat: 45.501689, zoom: 12.5 };
+  const desktopZoom = 6.6;
+  const mobileZoom = 6.1;
+  const initialState = { lng: -102.3267, lat: 30.3892, zoom: desktopZoom };
 
   const markerHeight = 39;
   const markerId = 'moments';
@@ -88,13 +90,17 @@
   }
 
   onMount(() => {
+    const startingZoom = window.matchMedia('(max-width: 640px)').matches
+      ? mobileZoom
+      : desktopZoom;
+
     map = new Map({
       container: mapContainer,
       style: style,
       center: [initialState.lng, initialState.lat],
-      zoom: initialState.zoom,
-      minZoom: 3,
-      maxZoom: 18,
+      zoom: startingZoom,
+      minZoom: 2.5,
+      maxZoom: 19,
       attributionControl: false
     });
     map.addControl(
