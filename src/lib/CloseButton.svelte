@@ -10,6 +10,7 @@
   style={position === 'right' ? 'right: 0' : ''}
 >
   <span class="close-btn__text">
+    <slot />
     <svg
       class="general_button__fadein"
       xmlns="http://www.w3.org/2000/svg"
@@ -59,5 +60,6 @@
   .close-btn__text {
     display: inline-block;
     overflow: hidden;
+    font-size: 0;
   }
 </style>

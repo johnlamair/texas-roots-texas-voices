@@ -17,7 +17,6 @@
   } = maplibregl;
   import 'maplibre-gl/dist/maplibre-gl.css';
   import markerImage from '$lib/assets/marker.png';
-  import markerHoveredImage from '$lib/assets/marker-hovered.png';
   import styleJson from '$lib/data/pmtiles/style.json';
   import tx23Boundary from '$lib/data/tx23.json';
   const style = styleJson as StyleSpecification;
@@ -28,6 +27,7 @@
     getFeatureCollectionBounds,
     isPointInsideGeometry
   } from '$lib/utils/geo';
+  import { ISSUES, flowerAsset } from '$lib/data/issues';
   import type {
     FeatureCollection,
     Point,
@@ -35,6 +35,14 @@
     MultiPolygon,
     Polygon
   } from 'geojson';
+
+  // Eagerly import all flower assets so Vite bundles them
+  const flowerImages: Record<string, string> = Object.fromEntries(
+    ISSUES.map((issue) => [
+      issue.slug,
+      new URL(`./assets/${flowerAsset(issue.slug)}`, import.meta.url).href
+    ])
+  );
 
   let map: MapType;
   let mapContainer: HTMLDivElement;
@@ -81,7 +89,6 @@
   const markerHeight = 39;
   const markerId = 'moments';
   const markerLayerId = 'moments-layer';
-  const markerHoveredLayerId = 'moments-hovered-layer';
   const activeMarkerSourceId = 'active-marker-source';
   const activeMarkerLayerId = 'active-marker-layer';
 
@@ -118,7 +125,8 @@
     map: MapType,
     layerId: string,
     sourceId: string,
-    iconImage: string,
+    iconImage: string | maplibregl.ExpressionSpecification,
+    layout: object = {},
     paint: object = {}
   ) {
     map.addLayer({
@@ -128,10 +136,11 @@
       layout: {
         'icon-allow-overlap': true,
         'icon-image': iconImage,
-        'icon-size': 0.45,
-        'icon-anchor': 'bottom'
+        'icon-size': 0.5,
+        'icon-anchor': 'bottom',
+        ...layout
       },
-      paint: paint
+      paint
     });
   }
 
@@ -209,21 +218,39 @@
 
       try {
         await loadImageAndAddToMap(map, markerImage, 'marker');
-        await loadImageAndAddToMap(map, markerHoveredImage, 'marker-hovered');
         await loadImageAndAddToMap(map, addMarkerImage, 'add-marker');
+        // Load all flower icons
+        for (const issue of ISSUES) {
+          await loadImageAndAddToMap(
+            map,
+            flowerImages[issue.slug],
+            `flower-${issue.slug}`
+          );
+        }
       } catch (error) {
         console.error('Error loading marker images:', error);
       }
 
-      addPinLayer(map, markerLayerId, markerId, 'marker');
-      addPinLayer(map, markerHoveredLayerId, markerId, 'marker-hovered', {
-        'icon-opacity': [
-          'case',
-          ['boolean', ['feature-state', 'hover'], false],
-          1,
-          0
-        ]
-      });
+      // Expression: pick flower icon by issue property, fall back to default marker
+      const flowerIconExpression = [
+        'match',
+        ['coalesce', ['get', 'issue'], 'other'],
+        ...ISSUES.flatMap(
+          (issue) => [issue.slug, `flower-${issue.slug}`] as const
+        ),
+        'marker'
+      ] as unknown as maplibregl.ExpressionSpecification;
+
+      addPinLayer(
+        map,
+        markerLayerId,
+        markerId,
+        flowerIconExpression,
+        {},
+        {
+          'icon-opacity': 1
+        }
+      );
 
       map.addSource(activeMarkerSourceId, {
         type: 'geojson',

@@ -11,6 +11,7 @@ import type {
 import { roundCoordinates } from '$lib/utils/utils';
 import tx23Boundary from '$lib/data/tx23.json';
 import { randomPointInGeometry } from '$lib/utils/geo';
+import { ISSUE_SLUGS } from '$lib/data/issues';
 
 const tx23GeoJSON = tx23Boundary as unknown as GeoJsonFeatureCollection<
   Polygon | MultiPolygon
@@ -32,6 +33,7 @@ function generateRandomDescription(id: number): string {
 
 function generateRandomMoment(id: number): Feature<Point> {
   const [longitude, latitude] = randomPointInGeometry(tx23Geometry);
+  const issue = ISSUE_SLUGS[Math.floor(Math.random() * ISSUE_SLUGS.length)];
 
   const point: Point = {
     type: 'Point',
@@ -42,7 +44,7 @@ function generateRandomMoment(id: number): Feature<Point> {
     type: 'Feature',
     id: id,
     geometry: point,
-    properties: {} // Empty properties to satisfy the GeoJSON type
+    properties: { issue }
   };
 
   return feature;
@@ -60,14 +62,7 @@ function generateAndSaveMoments(count: number, filePath: string): void {
     features: features
   };
 
-  // Remove empty properties from each feature
-  const simplifiedMoments = {
-    ...moments,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    features: moments.features.map(({ properties, ...rest }) => rest)
-  };
-
-  saveToFile(simplifiedMoments, filePath);
+  saveToFile(moments, filePath);
 }
 
 function generateAndSaveDescriptions(count: number, filePath: string): void {

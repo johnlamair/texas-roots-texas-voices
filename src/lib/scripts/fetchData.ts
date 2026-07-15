@@ -18,7 +18,8 @@ type Moment = {
   location: {
     coordinates: [number, number];
   };
-  description: string;
+  description?: string;
+  issue?: string | null;
 };
 
 const tx23GeoJSON = tx23Boundary as unknown as GeoJsonFeatureCollection<
@@ -32,7 +33,7 @@ export async function fetchIdCoords(): Promise<FeatureCollection<
 > | null> {
   const { data, error } = await supabase
     .from('moments')
-    .select('short_id, location')
+    .select('short_id, location, issue')
     .eq('status', 'approved');
 
   if (error) {
@@ -40,7 +41,7 @@ export async function fetchIdCoords(): Promise<FeatureCollection<
     return null;
   }
 
-  const filtered = (data as Moment[]).filter((moment) =>
+  const filtered = (data as unknown as Moment[]).filter((moment) =>
     isPointInsideGeometry(moment.location.coordinates, tx23Geometry)
   );
 
@@ -53,7 +54,7 @@ export async function fetchIdCoords(): Promise<FeatureCollection<
         type: 'Point',
         coordinates: roundCoordinates(moment.location.coordinates, 6)
       },
-      properties: {} // Include properties to match GeoJSON structure
+      properties: { issue: moment.issue ?? 'other' }
     }))
   };
 
@@ -66,7 +67,7 @@ export async function fetchIdDescriptions(): Promise<Record<
 > | null> {
   const { data, error } = await supabase
     .from('moments')
-    .select('short_id, description')
+    .select('short_id, description, location')
     .eq('status', 'approved');
 
   if (error) {
@@ -74,13 +75,13 @@ export async function fetchIdDescriptions(): Promise<Record<
     return null;
   }
 
-  const descriptions: Record<number, string> = (data as Moment[])
+  const descriptions: Record<number, string> = (data as unknown as Moment[])
     .filter((moment) =>
       isPointInsideGeometry(moment.location.coordinates, tx23Geometry)
     )
     .reduce(
       (acc, moment) => {
-        acc[moment.short_id] = moment.description;
+        acc[moment.short_id] = moment.description ?? '';
         return acc;
       },
       {} as Record<number, string>
@@ -97,16 +98,8 @@ export async function writeGeoJsonToFile(
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  const simplifiedGeoJson = {
-    ...geoJson,
-    features: geoJson.features.map(
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      ({ properties: properties, ...rest }) => rest
-    )
-  };
-
   const filePath = path.resolve(outputDir, 'moments.json');
-  await fs.promises.writeFile(filePath, JSON.stringify(simplifiedGeoJson));
+  await fs.promises.writeFile(filePath, JSON.stringify(geoJson));
   return filePath;
 }
 

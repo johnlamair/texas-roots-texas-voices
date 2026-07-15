@@ -13,8 +13,10 @@
   } from '@svelte-put/cloudflare-turnstile';
   import { PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY } from '$env/static/public';
   import { SvelteToast, toast } from '@zerodevx/svelte-toast';
+  import { ISSUES } from '$lib/data/issues';
 
   let momentDescription = '';
+  let selectedIssue = '';
   let captchaToken = '';
   let isAddButtonDisabled = true;
   let requestCaptcha = false;
@@ -44,7 +46,8 @@
   $: isAddButtonDisabled =
     !$activeMarkerCoords?.lng ||
     !$activeMarkerCoords?.lat ||
-    !momentDescription;
+    !momentDescription ||
+    !selectedIssue;
 
   async function handleAddMoment() {
     if (!captchaToken) {
@@ -56,6 +59,7 @@
       lng: $activeMarkerCoords?.lng,
       lat: $activeMarkerCoords?.lat,
       description: momentDescription,
+      issue: selectedIssue,
       captchaToken
     });
 
@@ -118,6 +122,12 @@
             <span>3</span>Click the Add button.
           </div>
           <form>
+            <select bind:value={selectedIssue} class="issue-select">
+              <option value="" disabled>Select your key issue…</option>
+              {#each ISSUES as issue}
+                <option value={issue.slug}>{issue.label}</option>
+              {/each}
+            </select>
             <textarea
               bind:value={momentDescription}
               id="txt_contents"
@@ -324,7 +334,7 @@
     width: 100%;
     font-size: 12pt;
     height: 12em;
-    background-color: #f4b9d6;
+    background-color: #e8ede3;
     border: 1.01px solid var(--color-dark);
   }
 
@@ -352,5 +362,19 @@
   .overlay--add textarea {
     box-sizing: border-box !important;
     padding: 10px !important;
+  }
+  .issue-select {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 8px 10px;
+    font-family: 'Apfel Grotezk', sans-serif;
+    font-size: 13pt;
+    border: 1.01px solid var(--color-dark);
+    background-color: #e8ede3;
+    color: var(--color-dark);
+    appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
   }
 </style>

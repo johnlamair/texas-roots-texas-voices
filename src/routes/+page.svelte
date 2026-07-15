@@ -8,7 +8,6 @@
   import NavBar from '$lib/NavBar.svelte';
   import { addOverlayVisible, infoOverlayVisible } from '../stores';
   import qtm_sharing_image from '$lib/assets/qtm_sharing_image.jpg';
-  import DonatePopup from '$lib/DonatePopup.svelte';
 </script>
 
 <svelte:head>
@@ -50,4 +49,3 @@
   <AddOverlay></AddOverlay>
 {/if}
 <Map></Map>
-<DonatePopup></DonatePopup>

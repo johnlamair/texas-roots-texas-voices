@@ -4,7 +4,7 @@ import { supabase } from '$lib/clients/supabaseClient';
 import { CLOUDFLARE_TURNSTILE_SECRET } from '$env/static/private';
 
 export const POST: RequestHandler = async ({ request }) => {
-  const { lng, lat, description, captchaToken } = await request.json();
+  const { lng, lat, description, issue, captchaToken } = await request.json();
 
   if (!captchaToken) {
     return json({ error: 'CAPTCHA token is missing.' }, { status: 400 });
@@ -38,6 +38,7 @@ export const POST: RequestHandler = async ({ request }) => {
   const { error } = await supabase.from('moments').insert([
     {
       description,
+      issue: issue ?? null,
       location: `SRID=4326;POINT(${lng} ${lat})`,
       status: 'pending'
     }
